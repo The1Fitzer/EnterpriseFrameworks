@@ -1,0 +1,11 @@
+C:\Users\fitzer\Desktop\FinalPorjectBuild\FinalPorjectBuild\bin\FinalPorjectBuild.dll
+C:\Users\fitzer\Desktop\FinalPorjectBuild\FinalPorjectBuild\bin\FinalPorjectBuild.pdb
+C:\Users\fitzer\Desktop\FinalPorjectBuild\FinalPorjectBuild\bin\EntityFramework.dll
+C:\Users\fitzer\Desktop\FinalPorjectBuild\FinalPorjectBuild\bin\EntityFramework.xml
+C:\Users\fitzer\Desktop\FinalPorjectBuild\FinalPorjectBuild\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\fitzer\Desktop\FinalPorjectBuild\FinalPorjectBuild\obj\Debug\FinalPorjectBuild.dll
+C:\Users\fitzer\Desktop\FinalPorjectBuild\FinalPorjectBuild\obj\Debug\FinalPorjectBuild.pdb
+C:\Users\fitzer\Desktop\FinalPorjectBuild\FinalPorjectBuild\bin\BusinessLogic.dll
+C:\Users\fitzer\Desktop\FinalPorjectBuild\FinalPorjectBuild\bin\BusinessLogic.pdb
+C:\Users\fitzer\Desktop\FinalPorjectBuild\FinalPorjectBuild\bin\DataLayer.dll
+C:\Users\fitzer\Desktop\FinalPorjectBuild\FinalPorjectBuild\bin\DataLayer.pdb

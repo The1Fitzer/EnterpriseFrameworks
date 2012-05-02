@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="onlineshopModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="onlineshopModelStoreContainer">
+    <EntitySet Name="Products" EntityType="onlineshopModel.Store.Products" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Roles" EntityType="onlineshopModel.Store.Roles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Store" EntityType="onlineshopModel.Store.Store" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="onlineshopModel.Store.Users" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Products_0" Association="onlineshopModel.Store.FK_Products_0">
+      <End Role="Store" EntitySet="Store" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_1" Association="onlineshopModel.Store.FK_Products_1">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Store_0" Association="onlineshopModel.Store.FK_Store_0">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Store" EntitySet="Store" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_0" Association="onlineshopModel.Store.FK_Users_0">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="product_id" />
+    </Key>
+    <Property Name="product_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="store_id" Type="int" />
+    <Property Name="user_id" Type="int" />
+    <Property Name="product_name" Type="varchar" MaxLength="128" />
+    <Property Name="product_desc" Type="varchar" MaxLength="128" />
+    <Property Name="product_price" Type="decimal" />
+    <Property Name="picture" Type="varchar" MaxLength="128" />
+    <Property Name="quantity" Type="int" />
+    <Property Name="create_time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="role_id" />
+    </Key>
+    <Property Name="role_id" Type="int" Nullable="false" />
+    <Property Name="role_name" Type="varchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="Store">
+    <Key>
+      <PropertyRef Name="store_id" />
+    </Key>
+    <Property Name="store_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="user_id" Type="int" />
+    <Property Name="store_name" Type="varchar" MaxLength="128" />
+    <Property Name="type" Type="varchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" MaxLength="128" />
+    <Property Name="role" Type="int" />
+    <Property Name="phone" Type="int" />
+    <Property Name="password" Type="varchar" MaxLength="128" />
+  </EntityType>
+  <Association Name="FK_Products_0">
+    <End Role="Store" Type="onlineshopModel.Store.Store" Multiplicity="0..1" />
+    <End Role="Products" Type="onlineshopModel.Store.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Store">
+        <PropertyRef Name="store_id" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="store_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_1">
+    <End Role="Users" Type="onlineshopModel.Store.Users" Multiplicity="0..1" />
+    <End Role="Products" Type="onlineshopModel.Store.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Store_0">
+    <End Role="Users" Type="onlineshopModel.Store.Users" Multiplicity="0..1" />
+    <End Role="Store" Type="onlineshopModel.Store.Store" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="Store">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_0">
+    <End Role="Roles" Type="onlineshopModel.Store.Roles" Multiplicity="0..1" />
+    <End Role="Users" Type="onlineshopModel.Store.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="role_id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="role" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

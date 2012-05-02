@@ -1,0 +1,7 @@
+C:\Users\fitzer\Desktop\FinalPorjectBuild\BusinessLogic\bin\Debug\BusinessLogic.dll
+C:\Users\fitzer\Desktop\FinalPorjectBuild\BusinessLogic\bin\Debug\BusinessLogic.pdb
+C:\Users\fitzer\Desktop\FinalPorjectBuild\BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\fitzer\Desktop\FinalPorjectBuild\BusinessLogic\obj\Debug\BusinessLogic.dll
+C:\Users\fitzer\Desktop\FinalPorjectBuild\BusinessLogic\obj\Debug\BusinessLogic.pdb
+C:\Users\fitzer\Desktop\FinalPorjectBuild\BusinessLogic\bin\Debug\DataLayer.dll
+C:\Users\fitzer\Desktop\FinalPorjectBuild\BusinessLogic\bin\Debug\DataLayer.pdb
